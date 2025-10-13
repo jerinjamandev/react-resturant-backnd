@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Spicy Chicken Burger",
+    "price": 8.99,
+    "description": "Juicy grilled chicken patty with spicy mayo and fresh lettuce.",
+    "ingredients": ["Chicken breast", "Mayo", "Lettuce", "Bun", "Spices"],
+    "img": "https://images.unsplash.com/photo-1606755962773-0cbb0eaa0b46"
+  },
+  {
+    "title": "Margherita Pizza",
+    "price": 12.5,
+    "description": "Classic Italian pizza with mozzarella, tomato, and basil.",
+    "ingredients": ["Flour", "Cheese", "Tomato sauce", "Basil", "Olive oil"],
+    "img": "https://images.unsplash.com/photo-1601924570565-0e8ef3f3d6d4"
+  },
+  {
+    "title": "Beef Steak",
+    "price": 18.0,
+    "description": "Tender beef steak grilled to perfection with garlic butter.",
+    "ingredients": ["Beef", "Garlic", "Butter", "Salt", "Pepper"],
+    "img": "https://images.unsplash.com/photo-1604908812528-73f29c9a7f59"
+  },
+  {
+    "title": "Pasta Alfredo",
+    "price": 10.5,
+    "description": "Creamy pasta with rich Alfredo sauce and parmesan cheese.",
+    "ingredients": ["Pasta", "Cream", "Butter", "Parmesan", "Garlic"],
+    "img": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f"
+  },
+  {
+    "title": "Vegetable Salad",
+    "price": 6.75,
+    "description": "Healthy and fresh mixed veggie salad with olive dressing.",
+    "ingredients": ["Lettuce", "Tomato", "Cucumber", "Carrot", "Olive oil"],
+    "img": "https://images.unsplash.com/photo-1551218808-94e220e084d2"
+  },
+  {
+    "title": "Sushi Platter",
+    "price": 14.99,
+    "description": "Assorted sushi rolls with fresh salmon and tuna.",
+    "ingredients": ["Rice", "Salmon", "Tuna", "Nori", "Soy sauce"],
+    "img": "https://images.unsplash.com/photo-1553621042-f6e147245754"
+  },
+  {
+    "title": "Chocolate Cake",
+    "price": 5.5,
+    "description": "Moist chocolate cake topped with creamy chocolate ganache.",
+    "ingredients": ["Flour", "Cocoa", "Sugar", "Eggs", "Butter"],
+    "img": "https://images.unsplash.com/photo-1605475128023-9b3a1e36d5a2"
+  },
+  {
+    "title": "Fresh Lemon Juice",
+    "price": 3.0,
+    "description": "Refreshing homemade lemon juice with mint and ice.",
+    "ingredients": ["Lemon", "Water", "Sugar", "Mint", "Ice"],
+    "img": "https://images.unsplash.com/photo-1551024709-8f23befc6f87"
+  }
+]
