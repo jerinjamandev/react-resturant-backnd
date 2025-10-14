@@ -2,6 +2,7 @@ const express = require('express')
 var cors = require('cors')
 const app = express()
 const port = 3000
+const food =require('./data.json')
 
 app.use(cors())
 app.use(express.json())
@@ -36,6 +37,9 @@ run().catch(console.dir);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
+})
+app.get('/food',(req,res)=>{
+  res.send(food)
 })
 
 app.listen(port, () => {
