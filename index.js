@@ -28,6 +28,7 @@ async function run() {
        
     const DB=client.db('resturent-DB')
     const foodscollection=DB.collection('foodsmenu')
+    const addtocartcollection=DB.collection('addtocart')
     // food get api
      app.get('/foods',async(req,res)=>{
       const result=await foodscollection.find().toArray()
@@ -41,6 +42,25 @@ async function run() {
       const result=await foodscollection.findOne(query)
       res.send(result)
      })
+
+
+     app.post('/addtocart',async(req,res)=>{
+      const data=req.body
+      const result=await addtocartcollection.insertOne(data)
+      res.send(result)
+     })
+
+     app.get('/addtocart',async(req,res)=>{
+      const email=req.query.email;
+      const result=await addtocartcollection.find({email:email}).toArray()
+      res.send(result)
+
+     })
+
+     
+
+
+     
 
 
 
