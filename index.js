@@ -2,7 +2,7 @@ const express = require('express')
 var cors = require('cors')
 const app = express()
 const port = 3000
-const food =require('./data.json')
+const food = require('./data.json')
 
 app.use(cors())
 app.use(express.json())
@@ -25,42 +25,49 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-       
-    const DB=client.db('resturent-DB')
-    const foodscollection=DB.collection('foodsmenu')
-    const addtocartcollection=DB.collection('addtocart')
+
+    const DB = client.db('resturent-DB')
+    const foodscollection = DB.collection('foodsmenu')
+    const addtocartcollection = DB.collection('addtocart')
     // food get api
-     app.get('/foods',async(req,res)=>{
-      const result=await foodscollection.find().toArray()
+    app.get('/foods', async (req, res) => {
+      const result = await foodscollection.find().toArray()
       res.send(result)
-     })
+    })
 
 
-     app.get('/food/:id',async(req,res)=>{
-      const id=req.params.id;
-      const query={_id:new ObjectId(id)}
-      const result=await foodscollection.findOne(query)
+    app.get('/food/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) }
+      const result = await foodscollection.findOne(query)
       res.send(result)
-     })
+    })
 
 
-     app.post('/addtocart',async(req,res)=>{
-      const data=req.body
-      const result=await addtocartcollection.insertOne(data)
+    app.post('/addtocart', async (req, res) => {
+      const data = req.body
+      const result = await addtocartcollection.insertOne(data)
       res.send(result)
-     })
+    })
 
-     app.get('/addtocart',async(req,res)=>{
-      const email=req.query.email;
-      const result=await addtocartcollection.find({email:email}).toArray()
+    app.get('/addtocart', async (req, res) => {
+      const email = req.query.email;
+      const result = await addtocartcollection.find({ email: email }).toArray()
       res.send(result)
 
-     })
+    })
 
-     
+    app.delete('/cart/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) }
+      const dltresult=await addtocartcollection.deleteOne(query) 
+      res.send(dltresult)
+    })
 
 
-     
+
+
+
 
 
 
